@@ -73,10 +73,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoibmlzYW5zYWxhd2lqZXN1bmRhcmEiLCJhIjoiY2p0YWEwY3F3MDNyZjRhbnpxYzNocHBrciJ9.vD8nmYLS-E_vJOh4RGnFGA',
     maxZoom: 18,
@@ -179,7 +179,7 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
 
   more.href = DBHelper.urlForRestaurant(restaurant);
-more.tabIndex = 3;
+  more.tabIndex = 3;
   li.append(more)
 
   return li
@@ -193,6 +193,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
+
     function onClick() {
       window.location.href = marker.options.url;
     }
