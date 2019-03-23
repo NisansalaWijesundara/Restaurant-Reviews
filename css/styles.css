@@ -307,11 +307,11 @@ nav h1 a {
 	color: #666;
 }
 @media only screen and (min-width: 380px) {
-	#restaurants-list li {
-		max-width: 35%;
-	}
 	#restaurant-address {
 		font-size: 10pt;
+	}
+	.restaurant-img {
+		width: 100%;
 	}
 }
 @media only screen and (max-width: 800px) {
@@ -322,6 +322,7 @@ nav h1 a {
 		padding: 0;
 		overflow-x: hidden;
 	}
+
 	#breadcrumb {
 		width: 100vw;
 		padding-right: 0;
